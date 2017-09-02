@@ -8,9 +8,10 @@ import java.util.Date;
  * constructor to enforce that. Review the tips in the document 
  * "EncapCheckList.pdf" if needed.
  *
- * @author      Jim Lombardo, WCTC Instructor
+ * @author Mitch Fleming
  */
-public class Employee {
+public class Employee 
+{
     private String firstName;
     private String lastName;
     private String ssn;
@@ -20,7 +21,4 @@ public class Employee {
     private boolean movedIn;
     private String cubeId;
     private Date orientationDate;
-
-
-
 }
