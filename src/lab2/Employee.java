@@ -106,6 +106,10 @@ public class Employee {
     }
 
     public void setSsn(String ssn) {
+        if(ssn == null || ssn.isEmpty()) 
+        {
+            throw new IllegalArgumentException(Required);
+        }
         this.ssn = ssn;
     }
 
