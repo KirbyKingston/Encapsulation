@@ -10,8 +10,7 @@ import java.util.Date;
  *
  * @author Mitch Fleming
  */
-public class Employee 
-{
+public class Employee {
     
     private final String Required = "This is a required field.";
 

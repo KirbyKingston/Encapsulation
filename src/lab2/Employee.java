@@ -19,6 +19,9 @@ import java.util.Date;
  * @author Mitch Fleming
  */
 public class Employee {
+    
+    private final String Required = "This is a required field.";
+    
     private String firstName;
     private String lastName;
     private String ssn;
@@ -69,22 +72,21 @@ public class Employee {
     // independently from other classes.
     public void moveIntoCubicle(String cubeId) {
         this.cubeId = cubeId;
-        this.movedIn = true;
-        SimpleDateFormat sdf = new SimpleDateFormat("M/d/yyyy");
-        String fmtDate = sdf.format(orientationDate);        
+        this.movedIn = true;  
         System.out.println(firstName + " " + lastName + " moved into cubicle "
-                + cubeId + " on " + fmtDate);
+                + cubeId + " on " + fmtDate());
     }
 
     public String getFirstName() {
         return firstName;
     }
 
-    // setter methods give the developer the power to control what data is
-    // allowed through validation.
-    
     public void setFirstName(String firstName) {
-       this.firstName = firstName;
+        if(firstName == null || firstName.isEmpty()) 
+        {
+            throw new IllegalArgumentException(Required);
+        }
+        this.firstName = firstName;
     }
 
     public String getLastName() {
@@ -92,7 +94,11 @@ public class Employee {
     }
 
     public void setLastName(String lastName) {
-       this.lastName = lastName;
+        if(lastName == null || lastName.isEmpty()) 
+        {
+            throw new IllegalArgumentException(Required);
+        }
+        this.lastName = lastName;
     }
 
     public String getSsn() {
