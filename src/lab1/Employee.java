@@ -24,6 +24,7 @@ public class Employee
     private boolean movedIn;
     private String cubeId;
     private Date orientationDate;
+    
 
     public String getFirstName() {
         return firstName;
@@ -54,6 +55,10 @@ public class Employee
     }
 
     public void setSsn(String ssn) {
+        if(ssn == null || ssn.isEmpty()) 
+        {
+            throw new IllegalArgumentException("Your SSN" + Required);
+        }
         this.ssn = ssn;
     }
 
