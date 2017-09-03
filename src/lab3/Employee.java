@@ -33,10 +33,12 @@ import java.util.Date;
  * 
  * Review the tips in the document "EncapCheckList.pdf" if needed.
  *
- * @author      Jim Lombardo, WCTC Instructor
- * @version     1.02
+ * @author Mitch Fleming
  */
 public class Employee {
+    
+    private final String Required = "This is a required field.";
+    
     private String firstName;
     private String lastName;
     private String ssn;
@@ -102,7 +104,7 @@ public class Employee {
     // doFirtTimeOrientation()
     private void meetDepartmentStaff() {
         metDeptStaff = true;
-        System.out.println(firstName + " " + lastName + " met with Dept. Staff on "
+        output.simpleOutput(firstName + " " + lastName + " met with Dept. Staff on "
             + getFormattedDate());
     }
 
@@ -111,7 +113,7 @@ public class Employee {
     // independently from other classes.
     public void reviewDeptPolicies() {
         reviewedDeptPolicies = true;
-        System.out.println(firstName + " " + lastName + " reviewed Dept policies on "
+        output.simpleOutput(firstName + " " + lastName + " reviewed Dept policies on "
             + getFormattedDate());
     }
 
@@ -121,7 +123,7 @@ public class Employee {
     public void moveIntoCubicle(String cubeId) {
         this.cubeId = cubeId;
         this.movedIn = true;
-        System.out.println(firstName + " " + lastName + " moved into cubicle "
+        output.simpleOutput(firstName + " " + lastName + " moved into cubicle "
                 + cubeId + " on " + getFormattedDate());
     }
 
@@ -135,7 +137,7 @@ public class Employee {
     // to display an error message -- not the job of this class!
     public void setFirstName(String firstName) {
         if(firstName == null || firstName.isEmpty()) {
-            throw new IllegalArgumentException("first name is required");
+            throw new IllegalArgumentException(Required);
         }
         this.firstName = firstName;
     }
@@ -146,7 +148,7 @@ public class Employee {
 
     public void setLastName(String lastName) {
         if(lastName == null || lastName.isEmpty()) {
-            System.out.println("last name is required");
+            throw new IllegalArgumentException(Required);
         }
         this.lastName = lastName;
     }
@@ -157,8 +159,7 @@ public class Employee {
 
     public void setSsn(String ssn) {
         if(ssn == null || ssn.length() < 9 || ssn.length() > 11) {
-            System.out.println("ssn is required and must be "
-                    + "between 9 and 11 characters (if hyphens are used)");
+            throw new IllegalArgumentException(Required);
         }
         this.ssn = ssn;
     }
@@ -203,7 +204,7 @@ public class Employee {
     
     public void setCubeId(String cubeId) {
         if(cubeId == null || cubeId.isEmpty()) {
-            System.out.println("cube id is required");
+            throw new IllegalArgumentException(Required);
         }
         this.cubeId = cubeId;
     }
@@ -214,7 +215,7 @@ public class Employee {
 
     public void setOrientationDate(Date orientationDate) {
         if(orientationDate == null) {
-            System.out.println("orientationDate is required");
+            throw new IllegalArgumentException(Required);
         }
         this.orientationDate = orientationDate;
     }
