@@ -13,7 +13,7 @@ import java.util.Date;
 public class Employee 
 {
     
-    private final String Required = " is a required field.";
+    private final String Required = "This is a required field.";
 
     private String firstName;
     private String lastName;
@@ -33,7 +33,7 @@ public class Employee
     public void setFirstName(String firstName) {
         if(firstName == null || firstName.isEmpty()) 
         {
-            throw new IllegalArgumentException("First name" + Required);
+            throw new IllegalArgumentException(Required);
         }
         this.firstName = firstName;
     }
@@ -45,7 +45,7 @@ public class Employee
     public void setLastName(String lastName) {
         if(lastName == null || lastName.isEmpty()) 
         {
-            throw new IllegalArgumentException("Last name" + Required);
+            throw new IllegalArgumentException(Required);
         }
         this.lastName = lastName;
     }
@@ -57,7 +57,7 @@ public class Employee
     public void setSsn(String ssn) {
         if(ssn == null || ssn.isEmpty()) 
         {
-            throw new IllegalArgumentException("Your SSN" + Required);
+            throw new IllegalArgumentException(Required);
         }
         this.ssn = ssn;
     }

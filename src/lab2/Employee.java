@@ -16,8 +16,7 @@ import java.util.Date;
  * 
  * Review the tips in the document "EncapCheckList.pdf" if needed.
  *
- * @author      Jim Lombardo, WCTC Instructor
- * @version     1.02
+ * @author Mitch Fleming
  */
 public class Employee {
     private String firstName;
@@ -36,6 +35,7 @@ public class Employee {
         this.ssn = ssn;
     }
 
+    
     // Assume this must be performed first, and assume that an employee
     // would only do this once, upon being hired.
     public void meetWithHrForBenefitAndSalryInfo() {
@@ -154,4 +154,5 @@ public class Employee {
 
     public void setOrientationDate(Date orientationDate) {
         this.orientationDate = orientationDate;
-    }}
+    }
+}
