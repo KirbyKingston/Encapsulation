@@ -6,16 +6,14 @@ package lab4;
  * real world. Employees don't just hire themselves and them tell themselves
  * to go through orientation. There's usually a company and a HR person involved.
  *
- * @author      Jim Lombardo, WCTC Instructor
- * @version     1.02
+ * @author      Mitch
  */
 public class Startup {
     public static void main(String[] args) {
 
-        Employee employee = new Employee("Peter","Piper","333-33-3333");
+        Employer employer = new Employer();
         
-        employee.doFirstTimeOrientation("A101");
-        employee.getReportService().outputReport();
+        employer.processEmployee("Peter", "Piper", "111-11-1111");
     }
     
     

@@ -9,14 +9,13 @@ package lab4;
  *
  * @author Mitch
  */
-public class Employer {
+public class Management {
     
-    private Management manager;
-
-    void processEmployee(String peter, String piper, String string) {
-        throw new UnsupportedOperationException("Not supported yet."); 
+    public void Management
+    
+    public static void main(String[] args) {
+        
     }
-    
     
     
 }
