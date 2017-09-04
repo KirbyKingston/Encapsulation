@@ -13,8 +13,8 @@ public class Employer {
     
     private Management manager;
 
-    void processEmployee(String peter, String piper, String string) {
-        throw new UnsupportedOperationException("Not supported yet."); 
+    public void processEmployee(String firstName, String lastName, String ssn) {
+        manager.hireEmployee(firstName, lastName, ssn);
     }
     
     
