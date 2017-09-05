@@ -58,7 +58,7 @@ public class Employee {
         setSsn(ssn);
         output = new OutputService();
     }
-    
+   
     /* 
         This should be private because it is useful only to this class and then,
         only as a helper method to other methods. This is method hiding - a type 
@@ -91,7 +91,7 @@ public class Employee {
     // would only do this once, upon being hired. If that were true, this
     // method should not be public. It should only be available to this class
     // and should only be called as part of the larger task of:
-    private void meetWithHrForBenefitAndSalryInfo() {
+    public void meetWithHrForBenefitAndSalryInfo() {
         metWithHr = true;
         output.simpleOutput(firstName + " " + lastName + " met with Hr on "
             + getFormattedDate());
@@ -102,7 +102,7 @@ public class Employee {
     // method should not be public. It should only be available to this class
     // and should only be called as part of the larger task of:
     // doFirtTimeOrientation()
-    private void meetDepartmentStaff() {
+    public void meetDepartmentStaff() {
         metDeptStaff = true;
         output.simpleOutput(firstName + " " + lastName + " met with Dept. Staff on "
             + getFormattedDate());
