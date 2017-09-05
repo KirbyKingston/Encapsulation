@@ -16,7 +16,7 @@ import java.util.Date;
  * 
  * Review the tips in the document "EncapCheckList.pdf" if needed.
  *
- * @author Mitch Fleming
+ * @author Mitch
  */
 public class Employee {
     
@@ -42,6 +42,7 @@ public class Employee {
         SimpleDateFormat sdf = new SimpleDateFormat("M/d/yyyy");
         return sdf.format(orientationDate);
     }
+    
     // Assume this must be performed first, and assume that an employee
     // would only do this once, upon being hired.
     public void meetWithHrForBenefitAndSalryInfo() {
