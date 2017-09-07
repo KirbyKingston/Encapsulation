@@ -13,6 +13,7 @@ public class Company {
     
     public Company() {
         hr = new HrPerson();
+        
     }
     
     public void hireEmployee(String firstName, String lastName, String ssn) {
