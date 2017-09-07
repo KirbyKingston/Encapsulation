@@ -2,6 +2,7 @@ package lab3;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import lab4.EmployeeReportService;
 
 /**
  * In this lab focus on CLASS Encapsulation and  the Single Responsibility 
@@ -48,7 +49,7 @@ public class Employee {
     private boolean movedIn;
     private String cubeId;
     private Date orientationDate;
-    private OutputService output;
+    private EmployeeReportService reportService;
 
     public Employee(String firstName, String lastName, String ssn) {
         // Using setter method guarantees validation will be performed
@@ -56,7 +57,7 @@ public class Employee {
         setFirstName(firstName);
         setLastName(lastName);
         setSsn(ssn);
-        output = new OutputService();
+        reportService = new EmployeeReportService();
     }
    
     /* 
