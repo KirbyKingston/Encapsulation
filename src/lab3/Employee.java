@@ -87,14 +87,15 @@ public class Employee {
 
     // The following methods may be public or private, depending on whether
     // they need to be called from other classes independently.
-
+//Determined that they must be public regardless of instructions in case they would need to be accesed again after the 
+//orientation if they were to say get a raise. 
     // Assume this must be performed first, and assume that an employee
     // would only do this once, upon being hired. If that were true, this
     // method should not be public. It should only be available to this class
     // and should only be called as part of the larger task of:
     public void meetWithHrForBenefitAndSalryInfo() {
         metWithHr = true;
-        output.simpleOutput(firstName + " " + lastName + " met with Hr on "
+        reportService.addData(firstName + " " + lastName + " met with Hr on "
             + getFormattedDate());
     }
 
@@ -105,7 +106,7 @@ public class Employee {
     // doFirtTimeOrientation()
     public void meetDepartmentStaff() {
         metDeptStaff = true;
-        output.simpleOutput(firstName + " " + lastName + " met with Dept. Staff on "
+        reportService.addData(firstName + " " + lastName + " met with Dept. Staff on "
             + getFormattedDate());
     }
 
@@ -114,7 +115,7 @@ public class Employee {
     // independently from other classes.
     public void reviewDeptPolicies() {
         reviewedDeptPolicies = true;
-        output.simpleOutput(firstName + " " + lastName + " reviewed Dept policies on "
+        reportService.addData(firstName + " " + lastName + " reviewed Dept policies on "
             + getFormattedDate());
     }
 
@@ -124,7 +125,7 @@ public class Employee {
     public void moveIntoCubicle(String cubeId) {
         this.cubeId = cubeId;
         this.movedIn = true;
-        output.simpleOutput(firstName + " " + lastName + " moved into cubicle "
+        reportService.addData(firstName + " " + lastName + " moved into cubicle "
                 + cubeId + " on " + getFormattedDate());
     }
 
