@@ -43,6 +43,14 @@ public class Employee {
         return sdf.format(orientationDate);
     }
     
+     public void doFirstTimeOrientation(String cubeId) {
+        orientationDate = new Date();
+        meetWithHrForBenefitAndSalryInfo();
+        meetDepartmentStaff();
+        reviewDeptPolicies();
+        moveIntoCubicle(cubeId);
+    }
+    
     // Assume this must be performed first, and assume that an employee
     // would only do this once, upon being hired.
     public void meetWithHrForBenefitAndSalryInfo() {
